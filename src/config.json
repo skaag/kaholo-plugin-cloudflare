@@ -1,0 +1,103 @@
+{
+    "name": "CloudFlare",
+    "type": "executer",
+    "description": "A CloudFlare API Plugin for Kaholo",
+    "execProgram": "node",
+    "main": "app.js",
+    "version": "0.1.0",
+    "imgUrl": "CloudFlare_Icon.png",
+    "settings": [
+        {
+            "name": "CLOUDFLARE_EMAIL",
+            "viewName": "email",
+            "type": "vault"
+        },
+        {
+            "name": "CLOUDFLARE_KEY",
+            "viewName": "key",
+            "type": "vault"
+        },
+        {
+            "name": "CLOUDFLARE_TOKEN",
+            "viewName": "token",
+            "type": "vault"
+        }        
+    ],
+    "methods": [
+        {
+            "name": "browseZone",
+            "viewName": "Browse zone records",
+            "params": [
+                {
+                    "name": "ZONE_ID",
+                    "viewName": "Zone ID",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "exportZone",
+            "viewName": "Export a zone",
+            "params": [
+                {
+                    "name": "ZONE_ID",
+                    "viewName": "Zone ID",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "editRecord",
+            "viewName": "Edit a record",
+            "params": [
+                {
+                    "name": "ZONE_ID",
+                    "viewName": "Zone ID",
+                    "type": "string"
+                },
+                {
+                    "name": "RECORD_ID",
+                    "viewName": "Record ID",
+                    "type": "string"
+                },
+                {
+                    "name": "RECORD_OBJECT",
+                    "viewName": "Record object",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "name": "delRecord",
+            "viewName": "Delete a record",
+            "params": [
+                {
+                    "name": "ZONE_ID",
+                    "viewName": "Zone ID",
+                    "type": "string"
+                },
+                {
+                    "name": "RECORD_ID",
+                    "viewName": "Record ID",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "addRecord",
+            "viewName": "Add a record to a zone",
+            "params": [
+                {
+                    "name": "ZONE_ID",
+                    "viewName": "Zone ID",
+                    "type": "string"
+                },
+                {
+                    "name": "RECORD_OBJECT",
+                    "viewName": "Record object",
+                    "type": "object"
+                }
+            ]
+        }
+    ]
+}
