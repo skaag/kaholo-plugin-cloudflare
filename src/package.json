@@ -1,0 +1,15 @@
+{
+  "name": "kaholo-plugin-cloudflare",
+  "version": "1.0.0",
+  "description": "A CloudFlare API Plugin for Kaholo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aric Fedida <aric@devhost.io>",
+  "license": "GPL 3.0",
+  "dependencies": {
+    "cloudflare": "^2.7.0",
+    "request": "2.88.0"
+  }
+}
